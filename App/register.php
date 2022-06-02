@@ -28,14 +28,13 @@
 </head>
 <body>
     <div class="container">
-    <hr>
  <h3 style="text-align: center" id="title">Fill in the form to be able to see your details recorded below!</h3>
  <form class="form-horizontal" action="insert.php" method="post">
 
  <div style="text-align: center; padding: 10px" class="form-group">
  <label class="control-label col-sm-2" for="id">ID: </label>
  <div class="col-sm-10">
- <input type="text" name="id" required class="form-control input-sm" placeholder="Enter ID"> 
+ <input type="text" name="id" required class="form-control input-sm" placeholder="Enter ID" id="id"> 
  </div>
 </div>
 
@@ -81,7 +80,6 @@
   </div>
 
  </form>
-<hr>
 
 <table>
     <tr>

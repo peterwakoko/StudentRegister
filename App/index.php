@@ -26,14 +26,11 @@
         </nav>
 
     <div class="content">
-    <h4>Y'ello</h4>
     <h1>Numbers <span> matter!</span></h1>
     <h3> Be registered...</h3>
     
     </div>
 
     </div>
-
-
 </body>
 </html>
