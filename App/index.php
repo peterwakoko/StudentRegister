@@ -22,7 +22,7 @@
                 <li><a href="#">E-LEARNING</a></li>
                 <li><a href="#">CO-CURRICULAR</a></li>
             </ul>
-            <a href="register.php" class="btn">Register</a>
+            <a href="register.php" class="btn">Click Here</a>
         </nav>
 
     <div class="content">

@@ -28,45 +28,12 @@
 </head>
 <body>
     <div class="container">
-    <table>
-    <tr>
-        <th>ID</th>
-        <th>sNo</th>
-        <th>regNo</th>
-        <th>emailAddress</th>
-        <th>Edit</th>
-        <th>Delete</th>
-    </tr>
-
-    <?php
-    $sql = "SELECT * FROM Student";
-
-    $result = mysqli_query($link, $sql);
-    while($row = mysqli_fetch_array($result)){
-        $id = $row['id'];
-        $sNo = $row['sNo'];
-        $regNo = $row['regNo'];
-        $emailAddress = $row['emailAddress'];
-?>
-    <tr>
-        <td><?php echo $id; ?></td>
-        <td><?php echo $sNo; ?></td>
-        <td><?php echo $regNo; ?></td>
-        <td><?php echo $emailAddress; ?></td>
-        <td><a href="edit.php?id=<?php echo $id;?>"><i class="fa-solid fa-pen-to-square"></i></a></td>
-        <td><a href="delete.php?id=<?php echo $id;?>"><i class="fa-solid fa-trash-can"></i></a></td>
-    </tr>
-
-<?php
-    }
-?>
-</table>
     <hr>
- <h3 style="text-align: center" id="title">Fill in the form to be able to see your details above.</h3>
+ <h3 style="text-align: center" id="title">Fill in the form to be able to see your details recorded below!</h3>
  <form class="form-horizontal" action="insert.php" method="post">
 
  <div style="text-align: center; padding: 10px" class="form-group">
- <label class="control-label col-sm-2" for="sNo">ID: </label>
+ <label class="control-label col-sm-2" for="id">ID: </label>
  <div class="col-sm-10">
  <input type="text" name="id" required class="form-control input-sm" placeholder="Enter ID"> 
  </div>
@@ -116,6 +83,39 @@
  </form>
 <hr>
 
+<table>
+    <tr>
+        <th>ID</th>
+        <th>sNo</th>
+        <th>regNo</th>
+        <th>emailAddress</th>
+        <th>Edit</th>
+        <th>Delete</th>
+    </tr>
+
+    <?php
+    $sql = "SELECT * FROM Student";
+
+    $result = mysqli_query($link, $sql);
+    while($row = mysqli_fetch_array($result)){
+        $id = $row['id'];
+        $sNo = $row['sNo'];
+        $regNo = $row['regNo'];
+        $emailAddress = $row['emailAddress'];
+?>
+    <tr>
+        <td><?php echo $id; ?></td>
+        <td><?php echo $sNo; ?></td>
+        <td><?php echo $regNo; ?></td>
+        <td><?php echo $emailAddress; ?></td>
+        <td><a href="edit.php?id=<?php echo $id;?>"><i class="fa-solid fa-pen-to-square"></i></a></td>
+        <td><a href="delete.php?id=<?php echo $id;?>"><i class="fa-solid fa-trash-can"></i></a></td>
+    </tr>
+
+<?php
+    }
+?>
+</table>
     </div>
 
 
